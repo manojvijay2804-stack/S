@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Will You Be My Valentine?</title>
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        background: #f7c6d0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+    }
+
+    .card {
+        background: #fff;
+        padding: 40px;
+        border-radius: 16px;
+        text-align: center;
+        width: 320px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        position: relative;
+    }
+
+    h2 {
+        margin-bottom: 30px;
+        font-weight: 600;
+    }
+
+    .buttons {
+        margin-top: 20px;
+        position: relative;
+        height: 60px;
+    }
+
+    button {
+        padding: 10px 22px;
+        border-radius: 20px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        position: absolute;
+    }
+
+    #yes {
+        background: #ff4d6d;
+        color: white;
+        left: 60px;
+    }
+
+    #no {
+        background: #ddd;
+        left: 160px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h2>nirali will you be my valentine? 💖</h2>
+    <div class="buttons">
+        <button id="yes" onclick="alert('Yay! ❤️')">Yes</button>
+        <button id="no">No</button>
+    </div>
+</div>
+
+<script>
+    const noBtn = document.getElementById("no");
+
+    noBtn.addEventListener("mouseover", () => {
+        const maxX = 250;
+        const maxY = 40;
+
+        const randomX = Math.random() * maxX;
+        const randomY = Math.random() * maxY;
+
+        noBtn.style.left = randomX + "px";
+        noBtn.style.top = randomY + "px";
+    });
+</script>
+
+</body>
+</html>
